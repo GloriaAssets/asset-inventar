@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI Asset</title>
+
+    <style>
+        body{
+            margin:0;
+            background:#f3f5f7;
+            font-family:Segoe UI, Arial, sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .card{
+            width:350px;
+            background:white;
+            border-radius:16px;
+            padding:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.12);
+            text-align:center;
+        }
+
+        .logo{
+            width:120px;
+            margin-bottom:20px;
+        }
+
+        .company{
+            color:#005a9c;
+            font-size:24px;
+            font-weight:600;
+            margin-bottom:20px;
+        }
+
+        .asset-title{
+            color:#666;
+            font-size:14px;
+            text-transform:uppercase;
+            letter-spacing:1px;
+        }
+
+        .asset-id{
+            font-size:30px;
+            font-weight:bold;
+            color:#222;
+            margin:10px 0 25px 0;
+        }
+
+        .info{
+            color:#555;
+            line-height:1.8;
+        }
+
+        .footer{
+            margin-top:25px;
+            font-size:12px;
+            color:#999;
+        }
+
+        a{
+            color:#005a9c;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Sustituir por vuestro logo -->
+    logo.png
+
+    <div class="company">
+        STI Gruppe
+    </div>
+
+    <div class="asset-title">
+        Asset ID
+    </div>
+
+    <div id="assetId" class="asset-id">
+        Loading...
+    </div>
+
+    <div class="info">
+        <strong>Website</strong><br>
+        https://www.sti.chwww.sti.ch</a>
+        <br><br>
+
+        <strong>Telefon</strong><br>
+        +41 XX XXX XX XX
+    </div>
+
+    <div class="footer">
+        Dieses Gerät gehört der STI Gruppe.
+    </div>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const assetId = params.get("id");
+
+document.getElementById("assetId").textContent =
+    assetId || "Kein Asset angegeben";
+
+</script>
+
+</body>
+</html>
